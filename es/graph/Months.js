@@ -10,7 +10,7 @@ export default function Months(_ref) {
     customMonths = _ref.customMonths;
   if (customMonths.length !== MONTH.length) {
     customMonths = [];
-    throw new Error('`customMonths` should include 12 months.');
+    console.info('`customMonths` should include 12 months.');
   }
   var s = size + space * 2;
   var s2 = s * 2;

@@ -31,6 +31,9 @@ export default function render(vnode, ctx) {
     applyProperties(node, props);
   }
   children.forEach(function (v) {
+    if (!v) {
+      return;
+    }
     node.appendChild(typeof v === 'string' ? doc.createTextNode(v) : render(v, ctx));
   });
   return node;
