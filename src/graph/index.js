@@ -18,6 +18,9 @@ export default function Graph({
   padX = 20,
   padY = 20,
   styleOptions = {},
+  showDayTitles = true,
+  showMonths = true,
+  customMonths = [],
   onHover = noop
 }) {
   const values = [];
@@ -50,14 +53,14 @@ export default function Graph({
   const styles = getStyles(styleOptions);
 
   const attrs = {
-    styles, values, size, space, colorFun, padX, padY, onClick, onHover
+    styles, values, size, space, colorFun, padX, padY, onClick, onHover, customMonths
   };
   return (
     <svg width={width} height={height} viewBox={box}>
-      <rect x={0} y={0} width={width} height={height} fill="#fff" />
+      <rect x={0} y={0} width={width} height={height} fill={styles.background} />
       <Days {...attrs} />
-      <Months {...attrs} />
-      <DayTitles {...attrs} />
+      { showMonths && <Months {...attrs} /> }
+      { showDayTitles && <DayTitles {...attrs} /> }
     </svg>
   );
 }

@@ -2,9 +2,10 @@ const SIZE = '12px';
 const TYPE = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 export default function getStyles({
+  background = '#fff',
   textColor = '#959494',
   fontSize = SIZE,
-  fontFamily = TYPE
+  fontFamily = TYPE,
 }) {
   const text = {
     fill: textColor,
@@ -13,6 +14,7 @@ export default function getStyles({
     'dominant-baseline': 'central'
   };
   return {
+    background,
     text,
     text2: {
       ...text,
