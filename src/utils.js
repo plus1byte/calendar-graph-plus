@@ -17,7 +17,7 @@ export function today() {
 export function oneYearAgo() {
   const d = today();
   d.setFullYear(d.getFullYear() - 1);
-  d.setMonth(d.getMonth() + 1); 
+  d.setMonth(d.getMonth() + 1);
   return d;
 }
 

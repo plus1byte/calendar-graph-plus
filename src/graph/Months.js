@@ -6,8 +6,8 @@ export default function Months({
   styles, values, size, space, padX, padY, customMonths
 }) {
   if (customMonths.length !== MONTH.length) {
-    customMonths = []
-    console.error('`customMonths` should include 12 months.')
+    customMonths = [];
+    throw new Error('`customMonths` should include 12 months.');
   }
 
   const s = size + space * 2;
@@ -27,10 +27,7 @@ export default function Months({
   });
   return (
     <g>
-      {months.map((v, i) =>
-        <text key={i} x={v.x} y={padY / 2} style={styles.text}>
-          {customMonths.length > 0 ? customMonths[v.month] : MONTH[v.month]}
-        </text>)}
+      {months.map((v, i) => <text key={i} x={v.x} y={padY / 2} style={styles.text}>{customMonths.length > 0 ? customMonths[v.month] : MONTH[v.month]}</text>)}
     </g>
   );
 }
