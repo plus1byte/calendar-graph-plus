@@ -1,6 +1,6 @@
 {
   "name": "calendar-graph",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Calendar graph like github using jsx support SVG, Canvas and SSR",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/d-band/calendar-graph.git"
+    "url": "git+https://github.com/plus1byte/calendar-graph.git"
   },
   "keywords": [
     "calendar",
@@ -34,9 +34,9 @@
   "author": "d-band",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/d-band/calendar-graph/issues"
+    "url": "https://github.com/plus1byte/calendar-graph/issues"
   },
-  "homepage": "https://github.com/d-band/calendar-graph#readme",
+  "homepage": "https://github.com/plus1byte/calendar-graph#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
