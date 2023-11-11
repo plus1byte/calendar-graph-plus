@@ -6,7 +6,7 @@ export function diffDays(a, b) {
   return Math.floor((date2 - date1) / DAY);
 }
 
-export function noop() {}
+export function noop() { }
 
 export function today() {
   const d = new Date();
@@ -17,6 +17,7 @@ export function today() {
 export function oneYearAgo() {
   const d = today();
   d.setFullYear(d.getFullYear() - 1);
+  d.setMonth(d.getMonth() + 1); 
   return d;
 }
 
