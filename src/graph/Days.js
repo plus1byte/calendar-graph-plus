@@ -1,9 +1,9 @@
 import h from '../h';
 import { formatDate } from '../utils';
 
-export default function Days({ 
+export default function Days({
   values, size, space, padX, padY, colorFun, onClick, onHover
- }) {
+}) {
   return (
     <g>
       {values.map((v, i) => {
@@ -17,6 +17,8 @@ export default function Days({
                 class="cg-day"
                 x={x}
                 y={d.day * s + y0}
+                rx="2"
+                ry="2"
                 width={size}
                 height={size}
                 fill={colorFun(d)}
@@ -27,7 +29,7 @@ export default function Days({
               />
             ))}
             {new Array(7 - v.length).fill('block').map((_, index) => (
-              <rect class="cg-day" x={x} y={(v.length + index) * s + y0} width={size} height={size} fill="#fff" />
+              <rect class="cg-day" x={x} y={(v.length + index) * s + y0} rx="2" ry="2" width={size} height={size} fill="#fff" />
             ))}
           </g>
         )
