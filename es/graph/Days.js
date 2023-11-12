@@ -18,6 +18,8 @@ export default function Days(_ref) {
         "class": "cg-day",
         x: x,
         y: d.day * s + y0,
+        rx: "2",
+        ry: "2",
         width: size,
         height: size,
         fill: colorFun(d),
@@ -35,6 +37,8 @@ export default function Days(_ref) {
         "class": "cg-day",
         x: x,
         y: (v.length + index) * s + y0,
+        rx: "2",
+        ry: "2",
         width: size,
         height: size,
         fill: "#fff"

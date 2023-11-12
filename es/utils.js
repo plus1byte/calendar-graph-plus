@@ -13,8 +13,6 @@ export function today() {
 export function oneYearAgo() {
   var d = today();
   d.setFullYear(d.getFullYear() - 1);
-  d.setMonth(d.getMonth() + 1);
-  d.setDate(d.getDate() - 1);
   return d;
 }
 var colors = ['#eee', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
