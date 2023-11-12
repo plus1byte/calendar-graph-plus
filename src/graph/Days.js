@@ -1,9 +1,9 @@
 import h from '../h';
 import { formatDate } from '../utils';
 
-export default function Days({
+export default function Days({ 
   values, size, space, padX, padY, colorFun, onClick, onHover
-}) {
+ }) {
   return (
     <g>
       {values.map((v, i) => {
@@ -26,9 +26,12 @@ export default function Days({
                 onMouseOver={() => onHover(d)}
               />
             ))}
+            {new Array(7 - v.length).fill('block').map((_, index) => (
+              <rect class="cg-day" x={x} y={(v.length + index) * s + y0} width={size} height={size} fill="#fff" />
+            ))}
           </g>
-        );
+        )
       })}
     </g>
-  );
+  )
 }
