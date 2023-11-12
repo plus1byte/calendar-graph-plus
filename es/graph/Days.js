@@ -30,6 +30,15 @@ export default function Days(_ref) {
           return onHover(d);
         }
       });
+    }), new Array(7 - v.length).fill('block').map(function (_, index) {
+      return h("rect", {
+        "class": "cg-day",
+        x: x,
+        y: (v.length + index) * s + y0,
+        width: size,
+        height: size,
+        fill: "#fff"
+      });
     }));
   }));
 }
