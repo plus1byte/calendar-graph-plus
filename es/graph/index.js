@@ -23,6 +23,8 @@ export default function Graph(_ref) {
     padX = _ref$padX === void 0 ? 20 : _ref$padX,
     _ref$padY = _ref.padY,
     padY = _ref$padY === void 0 ? 20 : _ref$padY,
+    _ref$monthsPosition = _ref.monthsPosition,
+    monthsPosition = _ref$monthsPosition === void 0 ? 'top' : _ref$monthsPosition,
     _ref$styleOptions = _ref.styleOptions,
     styleOptions = _ref$styleOptions === void 0 ? {} : _ref$styleOptions,
     _ref$showDayTitles = _ref.showDayTitles,
@@ -71,7 +73,8 @@ export default function Graph(_ref) {
     padY: padY,
     onClick: onClick,
     onHover: onHover,
-    customMonths: customMonths
+    customMonths: customMonths,
+    monthsPosition: monthsPosition
   };
   return h("svg", {
     width: width,

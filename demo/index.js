@@ -3,6 +3,11 @@ import { today, oneYearAgo, diffDays, formatDate } from '../src/utils';
 
 const data = getData();
 const options = {
+  space: 3,
+  monthsPosition: 'top',
+  styleOptions: {
+    background: 'transparent'
+  },
   onClick: (v) => {
     console.log(v);
   }
@@ -39,7 +44,7 @@ function getData() {
 
 function tooltipInit() {
   const tip = document.getElementById('tooltip');
-  let elems = document.getElementsByClassName('cg-day');
+  let elems = document.getElementsByClassName('node');
   const mouseOver = function(e) {
     e = e || window.event;
     const elem = e.target || e.srcElement;

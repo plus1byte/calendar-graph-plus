@@ -8,14 +8,18 @@ export default function Days(_ref) {
     padY = _ref.padY,
     colorFun = _ref.colorFun,
     _onClick = _ref.onClick,
-    onHover = _ref.onHover;
+    onHover = _ref.onHover,
+    monthsPosition = _ref.monthsPosition;
+  var s = size + space * 2;
+  var y0 = padY + space;
+  if (monthsPosition === 'bottom') {
+    y0 = padY / 2;
+  }
   return h("g", null, values.map(function (v, i) {
-    var s = size + space * 2;
     var x = padX + i * s + space;
-    var y0 = padY + space;
     return h("g", null, v.map(function (d) {
       return h("rect", {
-        "class": "cg-day",
+        "class": "node",
         x: x,
         y: d.day * s + y0,
         rx: "2",
@@ -34,14 +38,16 @@ export default function Days(_ref) {
       });
     }), new Array(7 - v.length).fill('block').map(function (_, index) {
       return h("rect", {
-        "class": "cg-day",
+        "class": "node",
         x: x,
         y: (v.length + index) * s + y0,
         rx: "2",
         ry: "2",
         width: size,
         height: size,
-        fill: "#fff"
+        fill: "#fff",
+        stroke: "#f4f5f5",
+        "stroke-width": "1px"
       });
     }));
   }));
