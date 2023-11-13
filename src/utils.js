@@ -17,10 +17,11 @@ export function today() {
 export function oneYearAgo() {
   const d = today();
   d.setFullYear(d.getFullYear() - 1);
+  d.setDate(d.getDate() + 7);
   return d;
 }
 
-const colors = ['#eee', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
+const colors = ['#f4f5f5', '#daf6ea', '#c7f0df', '#82edc0', '#0bd07d'];
 export function rectColor(v) {
   if (!v.count) {
     return colors[0];
