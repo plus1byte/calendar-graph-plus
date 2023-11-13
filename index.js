@@ -18,7 +18,6 @@ const strGraph = new StrGraph(data, options);
 
 function renderStr() {
   const dom = document.querySelector('#str');
-  console.log(strGraph.render())
   dom.textContent = formatXML(strGraph.render());
 }
 
@@ -45,7 +44,7 @@ function getData() {
 
 function tooltipInit() {
   const tip = document.getElementById('tooltip');
-  let elems = document.getElementsByClassName('cg-day');
+  let elems = document.getElementById('node');
   const mouseOver = function(e) {
     e = e || window.event;
     const elem = e.target || e.srcElement;
