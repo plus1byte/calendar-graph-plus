@@ -3,6 +3,9 @@ import { today, oneYearAgo, diffDays, formatDate } from '../src/utils';
 
 const data = getData();
 const options = {
+  styleOptions: {
+    background: 'transparent'
+  },
   onClick: (v) => {
     console.log(v);
   }
