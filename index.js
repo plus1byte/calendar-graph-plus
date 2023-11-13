@@ -44,7 +44,7 @@ function getData() {
 
 function tooltipInit() {
   const tip = document.getElementById('tooltip');
-  let elems = document.getElementById('node');
+  let elems = document.getElementsByClassName('node');
   const mouseOver = function(e) {
     e = e || window.event;
     const elem = e.target || e.srcElement;
