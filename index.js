@@ -4,7 +4,6 @@ import { today, oneYearAgo, diffDays, formatDate } from '../src/utils';
 const data = getData();
 const options = {
   space: 3,
-  padY: 140,
   styleOptions: {
     background: 'transparent'
   },
