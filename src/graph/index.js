@@ -17,6 +17,7 @@ export default function Graph({
   space = 1,
   padX = 20,
   padY = 20,
+  monthsPosition = 'top',
   styleOptions = {},
   showDayTitles = true,
   showMonths = true,
@@ -53,7 +54,7 @@ export default function Graph({
   const styles = getStyles(styleOptions);
 
   const attrs = {
-    styles, values, size, space, colorFun, padX, padY, onClick, onHover, customMonths
+    styles, values, size, space, colorFun, padX, padY, onClick, onHover, customMonths, monthsPosition
   };
   return (
     <svg width={width} height={height} viewBox={box}>

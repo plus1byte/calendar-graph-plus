@@ -7,25 +7,37 @@ export default function render(vnode, ctx, e) {
   }
   if (tag === 'rect') {
     const {
-      x, y, width, height, fill, onClick
+      x, y, width, height, fill, stroke, onClick
     } = props;
 
     // From https://github.com/canvg/canvg
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + width, y);
-    ctx.lineTo(x + width, y + height);
-    ctx.lineTo(x, y + height);
-    ctx.lineTo(x, y);
+    ctx.beginPath(); 
+    ctx.moveTo(x + 2, y); 
+    ctx.lineTo(x + width - 2, y); 
+    ctx.arc(x + width - 2, y + 2, 2, Math.PI * 1.5, Math.PI * 2); 
+    ctx.lineTo(x + width, y + height - 2); 
+    ctx.arc(x + width - 2, y + height - 2, 2, 0, Math.PI * 0.5); 
+    ctx.lineTo(x + 2, y + height); 
+    ctx.arc(x + 2, y + height - 2, 2, Math.PI * 0.5, Math.PI); 
+    ctx.lineTo(x, y + 2); 
+    ctx.arc(x + 2, y + 2, 2, Math.PI, Math.PI * 1.5); 
+ 
     if (e && onClick && ctx.isPointInPath(e.x, e.y)) {
       onClick();
     }
+
     ctx.closePath();
 
     if (fill) {
       ctx.fillStyle = fill;
+      ctx.fill();
     }
-    ctx.fill();
+
+    if (stroke) {
+      ctx.strokeStyle = stroke;
+      ctx.lineWidth = 1;
+      ctx.stroke(); 
+    }
   }
   if (tag === 'text') {
     const { x, y, style } = props;

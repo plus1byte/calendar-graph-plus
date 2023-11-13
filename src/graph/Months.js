@@ -3,9 +3,9 @@ import h from '../h';
 const MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export default function Months({
-  styles, values, size, space, padX, padY, customMonths
+  styles, values, size, space, padX, padY, customMonths, monthsPosition
 }) {
-  if (customMonths.length !== MONTH.length) {
+  if (customMonths.length > 0 && customMonths.length < MONTH.length) {
     customMonths = [];
     console.info('`customMonths` should include 12 months.');
   }
@@ -13,6 +13,7 @@ export default function Months({
   const s = size + space * 2;
   const s2 = s * 2;
   const months = [];
+  let y = padY / 2;
   values.forEach((group, i) => {
     group.forEach((d, j) => {
       if (j === 0 && d.day === 0) {
@@ -25,9 +26,13 @@ export default function Months({
       }
     });
   });
+  
+  if (monthsPosition === 'bottom') {
+    y = 7 * s + padY - space;
+  }
   return (
     <g>
-      {months.map((v, i) => <text key={i} x={v.x} y={padY / 2} style={styles.text}>{customMonths.length > 0 ? customMonths[v.month] : MONTH[v.month]}</text>)}
+      {months.map((v, i) => <text key={i} x={v.x} y={y} style={styles.text}>{customMonths.length > 0 ? customMonths[v.month] : MONTH[v.month]}</text>)}
     </g>
   );
 }

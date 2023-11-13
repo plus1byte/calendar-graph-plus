@@ -1,19 +1,23 @@
 import h from '../h';
 
 export default function DayTitles({
-  styles, size, space, padX, padY
+  styles, size, space, padX, padY, monthsPosition
 }) {
   const s = size + space * 2;
-  const half = s / 2;
+  let gap = s / 2;
+
+  if (monthsPosition === 'bottom') {
+    gap -= space + padY / 2
+  }
   const days = [{
     v: 'M',
-    y: padY + (s * 1) + half,
+    y: padY + (s * 1) + gap,
   }, {
     v: 'W',
-    y: padY + (s * 3) + half,
+    y: padY + (s * 3) + gap,
   }, {
     v: 'F',
-    y: padY + (s * 5) + half,
+    y: padY + (s * 5) + gap,
   }];
   return (
     <g>
