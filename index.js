@@ -13,6 +13,7 @@ const strGraph = new StrGraph(data, options);
 
 function renderStr() {
   const dom = document.querySelector('#str');
+  console.log(strGraph.render())
   dom.textContent = formatXML(strGraph.render());
 }
 
