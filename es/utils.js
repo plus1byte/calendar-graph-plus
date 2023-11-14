@@ -11,10 +11,10 @@ export function today() {
   return d;
 }
 export function oneYearAgo() {
+  var day = 24 * 60 * 60 * 1000;
   var d = today();
   d.setFullYear(d.getFullYear() - 1);
-  d.setDate(d.getDate() + 7);
-  return d;
+  return new Date((7 - d.getDay()) * day + d.getTime());
 }
 var colors = ['#f4f5f5', '#daf6ea', '#c7f0df', '#82edc0', '#0bd07d'];
 export function rectColor(v) {
