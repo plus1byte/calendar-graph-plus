@@ -20,9 +20,13 @@ Thumbs.db
 .buildpath
 .settings
 
+es
+lib
+
 coverage
 .nyc_output
 package-lock.json
+yarn.lock
 
 node_modules
 demo/bundle.js
