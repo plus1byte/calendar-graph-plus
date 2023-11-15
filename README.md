@@ -1,4 +1,4 @@
-# Calendar Graph+
+# Calendar Graph Plus
 
 > Calendar graph plus library fork from [calendar-graph](https://github.com/d-band/calendar-graph)
 
@@ -8,11 +8,11 @@
 
 ## Plus
 
+- Integrated powerful tooltip [Tippy.js](https://tippyjs.bootcss.com/all-props/)
 - `monthsPosition` [String] now supports the option to position the months widget at the bottom of graph
 - `styleOptions.background` [String] now allows for a custom background to be applied
 - `showMonths` [Boolean] now allows the months widget to be hidden
 - `customMonths` [Array<String>] now allows for custom months content to be displayed
-
 
 ## Install
 
@@ -25,7 +25,7 @@ $ yarn add calendar-graph-plus
 [View demo online](https://plus1byte.github.io/calendar-graph-plus/)
 
 ```javascript
-import { SVGGraph, CanvasGraph, StrGraph } from 'calendar-graph-plus';
+import { SVGGraph, CanvasGraph, StrGraph, Tooltip } from 'calendar-graph-plus';
 
 const data = [
   { date: '2016-01-01', count: 1 },
@@ -69,10 +69,23 @@ const strGraph = new StrGraph(data, {
     return '#d6e685';
   }
 });
+
 this.body = strGraph.render();
+
+// Tippy.js
+Tooltip('.node', {
+  ignoreAttributes: true,
+  allowHTML: true,
+  content(ref) {
+    const count = ref.getAttribute('data-count')
+    const date = ref.getAttribute('data-date')
+    return `${date}<br/>${count}`
+  }
+})
+
 ```
 
-![image](./demo/image.png)
+![image](./demo/static/image.png)
 
 ## Options
 
@@ -100,8 +113,8 @@ this.body = strGraph.render();
 
 ## Report a issue
 
-- [All issues](https://github.com/d-band/calendar-graph/issues)
-- [New issue](https://github.com/d-band/calendar-graph/issues/new)
+- [All issues](https://github.com/plus1byte/calendar-graph-plus/issues)
+- [New issue](https://github.com/plus1byte/calendar-graph-plus/issues/new)
 
 ## License
 
