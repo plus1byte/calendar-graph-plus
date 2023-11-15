@@ -1,17 +1,16 @@
 {
   "name": "calendar-graph-plus",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Calendar graph like github with features, using jsx support SVG, Canvas and SSR.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
     "lib",
-    "es",
-    "src"
+    "es"
   ],
   "scripts": {
-    "lint": "eslint src",
     "build": "rollup -c --bundleConfigAsCjs",
+    "dev": "cd demo && dool server",
     "pages": "cd demo && dool build && gh-pages -d ."
   },
   "repository": {
@@ -41,15 +40,14 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.2.3",
+    "postcss": "^8.4.31",
     "rimraf": "^3.0.1",
     "rollup": "^4.4.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-uglify": "^6.0.4"
+  },
+  "dependencies": {
+    "tippy.js": "^6.3.7"
   }
 }
