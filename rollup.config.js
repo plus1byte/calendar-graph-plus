@@ -1,5 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
+import postcss from 'rollup-plugin-postcss'
 import { uglify } from 'rollup-plugin-uglify'
 
 const pkg = require('./package.json')
@@ -25,5 +26,11 @@ export default {
       exclude: 'node_modules/',
     }),
     uglify(),
+    postcss({
+      plugins: [],
+      extract: 'style/main.css',
+      minimize: true,
+      sourceMap: true,
+    }),
   ],
 }
