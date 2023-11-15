@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background: #23272d;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+h2 {
+  color: #fff;
+}
+#str {
+  width: 945px;
+  overflow-x: scroll;
+  background-color: #eee;
+  height: 200px;
+}
