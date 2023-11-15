@@ -20,8 +20,8 @@ Thumbs.db
 .buildpath
 .settings
 
-es
-lib
+es/
+lib/
 
 coverage
 .nyc_output
