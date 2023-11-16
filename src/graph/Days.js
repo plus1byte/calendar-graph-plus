@@ -1,5 +1,5 @@
 import h from '../h'
-import { formatDate } from '../utils'
+import { formatDate, WEEK } from '../utils'
 
 export default function Days({ values, size, space, padX, padY, colorFun, onClick, onHover, monthsPosition }) {
   const s = size + space * 2
