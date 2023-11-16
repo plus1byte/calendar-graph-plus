@@ -1,6 +1,6 @@
 {
   "name": "calendar-graph-plus",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Calendar graph like github with features, using jsx support SVG, Canvas and SSR.",
   "main": "lib/index.js",
   "module": "es/index.js",
