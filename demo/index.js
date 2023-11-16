@@ -26,9 +26,10 @@ Tooltip('.node', {
   content(ref) {
     const count = ref.getAttribute('data-count')
     const date = ref.getAttribute('data-date')
+    const week = ref.getAttribute('data-week')
     let text = count > 0 ? `更新 ${count} 篇文档` : '当日无更新'
 
-    return `${date}<br/>${text}`
+    return `${date} ${week}<br/>${text}`
   }
 })
 

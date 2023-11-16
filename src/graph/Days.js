@@ -1,5 +1,5 @@
 import h from '../h'
-import { WEEK, formatDate } from '../utils'
+import { formatDate } from '../utils'
 
 export default function Days({ values, size, space, padX, padY, colorFun, onClick, onHover, monthsPosition }) {
   const s = size + space * 2
@@ -25,7 +25,8 @@ export default function Days({ values, size, space, padX, padY, colorFun, onClic
                 height={size}
                 fill={colorFun(d)}
                 data-count={d.count}
-                data-date={`${formatDate(d.date)} ${WEEK[d.day]}`}
+                data-date={formatDate(d.date)}
+                data-week={WEEK[d.day]}
                 onClick={() => onClick(d)}
                 onMouseOver={() => onHover(d)}
               />
