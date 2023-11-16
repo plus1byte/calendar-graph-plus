@@ -44,13 +44,8 @@ export function pad(n) {
 }
 
 export function formatDate(dt) {
-  if (typeof dt === 'string') {
-    dt = new Date(dt)
-  }
-
   const y = dt.getFullYear()
   const m = dt.getMonth() + 1
   const d = dt.getDate()
-  const w = dt.getDay()
-  return `${y}-${pad(m)}-${pad(d)} ${WEEK[w]}`
+  return `${y}-${pad(m)}-${pad(d)}`
 }
