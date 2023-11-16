@@ -3,10 +3,5 @@
     bundle: './index.js'
   },
   outputPath: '.',
-  extract: false,
-  babelPlugins: [
-    ['@babel/plugin-transform-react-jsx', {
-      'pragma': 'h'
-    }]
-  ]
+  extract: false
 }
