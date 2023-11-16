@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-calendar-graph-plus@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/calendar-graph-plus/-/calendar-graph-plus-1.0.7.tgz#b2939c213a509a4fa52208300d8efe567dfc5072"
-  integrity sha512-P0Q5hUS8iQ2JylF8F82DrsX3XjkOZnXNHZrQTymq875gFbwuqOT9O9ON6+wTU6CWLBerd1SJvex0PukrlDcrNQ==
+calendar-graph-plus@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/calendar-graph-plus/-/calendar-graph-plus-1.0.11.tgz#3c155010625d26d99632a16aac309fdba09ac334"
+  integrity sha512-mBmtksR4BClaqF1m/N4lYzDoRrThvRrcPIKgiBjUhgtnDzgAKiQiYWPeaeFffI0zPEYIodZdmKIdymyeOAnieg==
   dependencies:
     tippy.js "^6.3.7"
 
