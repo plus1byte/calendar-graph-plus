@@ -9,7 +9,7 @@ export function diffDays(a, b) {
   return Math.floor((date2 - date1) / DAY)
 }
 
-export function noop() {}
+export function noop() { }
 
 export function today() {
   const d = new Date()
@@ -44,6 +44,10 @@ export function pad(n) {
 }
 
 export function formatDate(dt) {
+  if (typeof dt === 'string') {
+    dt = new Date(dt)
+  }
+
   const y = dt.getFullYear()
   const m = dt.getMonth() + 1
   const d = dt.getDate()
